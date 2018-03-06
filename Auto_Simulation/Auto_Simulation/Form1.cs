@@ -18,7 +18,7 @@ namespace Auto_Simulation
 
         private void Auto_erstellen_Click(object sender, EventArgs e)
         {
-
+            Auto A1 = new Auto();
         }
 
         private void Tanken_Click(object sender, EventArgs e)
@@ -30,5 +30,10 @@ namespace Auto_Simulation
         {
 
         }
+    }
+
+    class Auto
+    {
+        
     }
 }
