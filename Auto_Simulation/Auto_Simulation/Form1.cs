@@ -15,5 +15,20 @@ namespace Auto_Simulation
         {
             InitializeComponent();
         }
+
+        private void Auto_erstellen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tanken_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fahren_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
