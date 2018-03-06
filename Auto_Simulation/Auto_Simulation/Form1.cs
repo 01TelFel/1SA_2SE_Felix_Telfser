@@ -11,6 +11,8 @@ namespace Auto_Simulation
 {
     public partial class Form1 : Form
     {
+        string info = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +21,7 @@ namespace Auto_Simulation
         private void Auto_erstellen_Click(object sender, EventArgs e)
         {
             Auto A1 = new Auto(Marke.Text, Farbe.Text, Int32.Parse(PS.Text), Int32.Parse(Tankgröße.Text), Int32.Parse(Verbrauch.Text));
+            InfoBox.Text = A1.Info(info);
         }
 
         private void Tanken_Click(object sender, EventArgs e)
@@ -39,7 +42,22 @@ namespace Auto_Simulation
 
         public Auto(string Marke, string Farbe, int PS, int Tankgr, int Verbrauch)
         {
-            this.Marke = marke;
+            this.marke = Marke;
+            this.farbe = Farbe;
+            this.ps = PS;
+            this.tankgr = Tankgr;
+            this.verbrauch = Verbrauch;
+        }
+
+        public string Info(string Info)
+        {
+            Info = "Marke: " + this.marke + "\n";
+            //Info += "gefahren: " + + "\n";
+            Info += "Farbe: " + this.farbe + "\n";
+            Info += "PS: " + this.ps + "\n";
+            //Info += "Tankinhalt: " +  + "\n";
+            //Info += "Reichweite: " +  + "\n";
+            return Info;
         }
     }
 }
