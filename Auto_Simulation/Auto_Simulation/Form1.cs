@@ -18,7 +18,7 @@ namespace Auto_Simulation
 
         private void Auto_erstellen_Click(object sender, EventArgs e)
         {
-            Auto A1 = new Auto();
+            Auto A1 = new Auto(Marke.Text, Farbe.Text, Int32.Parse(PS.Text), Int32.Parse(Tankgröße.Text), Int32.Parse(Verbrauch.Text));
         }
 
         private void Tanken_Click(object sender, EventArgs e)
@@ -34,6 +34,12 @@ namespace Auto_Simulation
 
     class Auto
     {
-        
+        private string marke, farbe;
+        private int ps, tankgr, verbrauch;
+
+        public Auto(string Marke, string Farbe, int PS, int Tankgr, int Verbrauch)
+        {
+            this.Marke = marke;
+        }
     }
 }
