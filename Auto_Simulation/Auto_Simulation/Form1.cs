@@ -38,7 +38,7 @@ namespace Auto_Simulation
     class Auto
     {
         private string marke, farbe;
-        private int ps, tankgr, verbrauch;
+        private int ps, tankgr, verbrauch, km;
 
         public Auto(string Marke, string Farbe, int PS, int Tankgr, int Verbrauch)
         {
@@ -52,12 +52,17 @@ namespace Auto_Simulation
         public string Info(string Info)
         {
             Info = "Marke: " + this.marke + "\n";
-            //Info += "gefahren: " + + "\n";
+            Info += "gefahren: " + km + "\n";
             Info += "Farbe: " + this.farbe + "\n";
             Info += "PS: " + this.ps + "\n";
             //Info += "Tankinhalt: " +  + "\n";
             //Info += "Reichweite: " +  + "\n";
             return Info;
+        }
+
+        public void gefahren(int Km)
+        {
+            km += Km;
         }
     }
 }
